@@ -11,3 +11,7 @@ At the top you have BNF use in this program.  If a BNF name do not exist, you wi
 After that, a input text area where you can paste your equation.
 If you want to generate a random equation to test, click Generate.
 Click compute and this program with execute your equation and compare its value with Javascript.
+
+Two webpages with two different BNF and the same BNFInterpreter are used:
+- SimpleMath.html use a very simple BNF with only mathematic equation
+- MathWithLogic.html include logic operators.
