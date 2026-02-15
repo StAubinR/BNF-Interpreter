@@ -15,6 +15,6 @@ Click compute and this program with execute your equation and compare its value 
 Two webpages with two different BNF and the same BNFInterpreter are used:
 - SimpleMath.html use a very simple BNF with only mathematic equation
    https://staubinr.github.io/BNFInterpreter/SimpleMath.html
-- MathWithLogic.html include logic operators.
-  https://staubinr.github.io/BNFInterpreter/MathWithLogic.html
+- MathWithLogic.html include logic operators
+   https://staubinr.github.io/BNFInterpreter/MathWithLogic.html
   
