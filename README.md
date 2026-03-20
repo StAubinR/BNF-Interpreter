@@ -17,4 +17,7 @@ Two webpages with two different BNF and the same BNFInterpreter are used:
    <p>https://staubinr.github.io/BNFInterpreter/SimpleMath.html</p>
 - MathWithLogic.html include logic operators
    <p>https://staubinr.github.io/BNFInterpreter/MathWithLogic.html</p>
+   
+Javascript like language using BNF Nano Interpreter
+   <p>https://staubinr.github.io/BNFInterpreter/BNFWithLanguage.html</p>
   
