@@ -101,7 +101,6 @@ export function NANOINT() {
           } else if (bnf[kw]) {    // A ruleName?
             const subTree = buildTree(src, kw, depth+1); // Check with recursivity
             if (subTree.length) {  // Found something?
-              //tree.push((subTree.length==1)?subTree[0]:subTree);
               tree.push(subTree);
             } else { // If not, check the next option
               newOpt = true;
@@ -114,8 +113,6 @@ export function NANOINT() {
         }
         if (newOpt) tree = [];  // Empty a wrong partial tree
       }
-    } else {
-      console.log("Unknow rule name", rulename);
     }
     buildRpt(depth);
     return (tree.length==1)?tree[0]:tree;
@@ -191,11 +188,8 @@ export function NANOINT() {
   function evalTree(tree, depth) {
     evalRpt("Start",depth);
     let rsl = tree;
-    if (Array.isArray(tree) && tree.length) {
-      if (typeof tree[0] !=="function") console.log("Not a function", tree);
+    if (isOprNode(tree)) {
       rsl = tree[0](...tree.slice(1));
-    //} else {
-    //  console.log("Not array", tree);
     }
     evalRpt("End",depth);
     return rsl;
@@ -216,7 +210,7 @@ export function NANOINT() {
         } else if (prm  instanceof RegExp) {
           let strReg = prm.toString();
           strReg = strReg.substring(2,strReg.length-1).replace(/\\/g, "");
-          strReg = (strReg.length>2)?strReg.replace(/[\(\)]/g, "").split("|"):[strReg];
+          strReg = (strReg.length>2)?strReg.replace(/[\(\)]/g, "").split(or:[strReg];
           opt.push(strReg);
         } else if (typeof prm !== "function") {
           opt.push(prm);
@@ -277,7 +271,7 @@ export function NANOINT() {
       for (let ip=0; ip<prm.length; ip++) {
         const onePrm = prm[ip];
         if (typeof onePrm === "string") {
-          if (onePrm==="|") {
+          if (onePrm===or) {
             aStr.push("OR");
           } else {
             aStr.push(onePrm);
